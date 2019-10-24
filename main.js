@@ -15,19 +15,43 @@ function evalGuess() {
     console.log(gamerGuessNum);
     console.log(totalGuesses);
 
-    const feedback = document.querySelector
+    const feedback = document.querySelector('#feed')
+    const numTrys = document.querySelector('#numTrys')
 
     if(gamerGuessNum === correctNumber){
         console.log('You guessed the right number!')
+        feedback.innerHTML = "You Won!";
+        giveAward()
     }
     else if(gamerGuessNum > 15 || gamerGuessNum < 1) {
         console.log("Guess between 1 and 15")
+        feedback.innerHTML = "Choose Number between 1 and 15";
     }
     else if(gamerGuessNum > correctNumber){
         console.log('Too high')
+        feedback.innerHTML = "You guessed too high";
     }
     else if(gamerGuessNum < correctNumber){
         console.log('Too low')
+        feedback.innerHTML = "You guessed too low";
     }
 
+    numTrys.innerHTML = totalGuesses;
+
+}
+
+function giveAward() {
+    console.log('switch statement active')
+    switch(true) {
+        case totalGuesses > 0 && totalGuesses < 4:
+            console.log('Blue Ribbon')
+            break
+        case totalGuesses > 4 && totalGuesses < 10 :
+            console.log('Red Ribbon')
+            break
+        case totalGuesses > 10:
+            console.log('Yellow Ribbon')
+            break
+            
+    }
 }

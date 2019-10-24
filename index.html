@@ -35,16 +35,24 @@
             it takes you to guess the correct number.
         </p>
 
-        <div class="titles">
-            <p>Play</p>
-            <p>Trys</p>
-            <p>Feedback</p>
-            <p>Award</p>
-        </div>
-
         <div class="board">
-            <input id="guess" type="number" placeholder="Number">
-            <button onclick="evalGuess()">Guess</button>
+            <div class="play">
+                <h4>PLAY</h4>
+                <input id="guess" type="number" placeholder="Number">
+                <button onclick="evalGuess()">Guess</button>
+            </div>
+            <div class="trys">
+                <h4>TRYS</h4>
+                <p id="numTrys"></p>
+            </div>
+            <div class="feedback">
+                <h4>FEEDBACK</h4>
+                <p id="feed"></p>
+            </div>
+            <div class="award">
+                <h4>AWARD</h4>
+
+            </div>
         </div>
 
 <!-- FOOTER -->

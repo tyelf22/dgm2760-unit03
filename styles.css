@@ -50,22 +50,68 @@ header > h2 {
 .board {
     height: 450px;
     width: 100%;
+    margin-top: 20px;
     background: #9DD1F1;
+    display: flex;
+    flex-direction: row;
+    
 }
 
-.board input {
-    margin: 5px 1%;
-    width: 95px;
+.board h4 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.board p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    
+}
+
+
+.play {
+    flex-grow: 1;
+    border: 1px solid red
+}
+
+.play input {
+    
+    width: 100px;
     height: 25px;
+    margin-top: 20px;
 }
 
-.board button {
+.play button {
     display: block;
     width: 100px;
     margin: 5px 1%;
     border-radius: 10px;
     padding: 5px;
     background: white;
+}
+
+.trys {
+    flex-grow: 2;
+    border: 1px solid red
+}
+
+#numTrys {
+
+}
+
+.feedback {
+    flex-grow: 2;
+    border: 1px solid red
+}
+
+#feed {
+    
+}
+
+.award {
+    flex-grow: 1;
+    border: 1px solid red
 }
 
 
