@@ -6,25 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Unit 3</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <!-- HEADER -->
     <header>
-        <h1>Guessing Game</h1>
-        <h2>Can you guess the right number?</h2>
+        <h1> <span>Guessing Game</span> </h1>
+        <h2> <span>Can you guess the right number?</span> </h2>
     </header>
 <!-- MAIN -->
     <div class="main">
         <h2>Guessing Game</h2>
         <h3>What I learned</h3>
         <ul>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
+            <li>Generated a random number</li>
+            <li>Used math rounding</li>
+            <li>Added Click events</li>
+            <li>Switch statements</li>
+            <li>Manipulated DOM elements</li>
         </ul>
 
         <h3>Instructions</h3>
@@ -36,10 +36,10 @@
         </p>
 
         <div class="board">
-            <div class="play">
+            <div class="play" id="play">
                 <h4>PLAY</h4>
                 <input id="guess" type="number" placeholder="Number">
-                <button onclick="evalGuess()">Guess</button>
+                <button id="guessButton" onclick="evalGuess()">Guess</button>
             </div>
             <div class="trys">
                 <h4>TRYS</h4>

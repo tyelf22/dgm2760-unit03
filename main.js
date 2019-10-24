@@ -6,6 +6,10 @@ console.log(correctNumber);
 var gussed = false;
 var totalGuesses = 0;
 var gamerGuess = 0;
+const guessButton = document.querySelector('#guessButton');
+const feedback = document.querySelector('#feed')
+const numTrys = document.querySelector('#numTrys')
+const guessBtn = document.querySelector('button');
 
 function evalGuess() {
     totalGuesses += 1; //increment user guesses
@@ -15,13 +19,11 @@ function evalGuess() {
     console.log(gamerGuessNum);
     console.log(totalGuesses);
 
-    const feedback = document.querySelector('#feed')
-    const numTrys = document.querySelector('#numTrys')
-
     if(gamerGuessNum === correctNumber){
         console.log('You guessed the right number!')
         feedback.innerHTML = "You Won!";
         giveAward()
+        newButton()
     }
     else if(gamerGuessNum > 15 || gamerGuessNum < 1) {
         console.log("Guess between 1 and 15")
@@ -43,17 +45,17 @@ function evalGuess() {
 function giveAward() {
     console.log('switch statement active')
     switch(true) {
-        case totalGuesses > 0 && totalGuesses < 4:
+        case totalGuesses >= 0 && totalGuesses <= 3:
             console.log('gold medal')
-            imagePath = '../images/gold.png'
-            break
-        case totalGuesses > 4 && totalGuesses < 10 :
-            console.log('blue Ribbon')
             imagePath = '../images/blue.png'
             break
-        case totalGuesses > 10:
+        case totalGuesses >= 4 && totalGuesses <= 6 :
+            console.log('blue Ribbon')
+            imagePath = '../images/red.png'
+            break
+        case totalGuesses >= 7:
             console.log('red Ribbon')
-            imagePath = '../images/green.png'
+            imagePath = '../images/yellow.png'
             break
             
     }
@@ -63,5 +65,20 @@ function giveAward() {
     const ribbon = document.querySelector('#ribbonAward')
 
     ribbon.appendChild(awardImage);
+}
+
+function newButton() {
+    guessButton.remove();
+    const newButton = document.createElement('button')
+    const playSection =  document.querySelector('#play');
+    playSection.appendChild(newButton);
+    newButton.innerHTML = "New Game"
+
+    newButton.addEventListener("click", resetGame)
+}
+
+function resetGame() {
+    console.log('You pressed new game button')
+    document.location.reload();
 }
 
