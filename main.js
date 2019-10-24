@@ -25,9 +25,9 @@ function evalGuess() {
         giveAward()
         newButton()
     }
-    else if(gamerGuessNum > 15 || gamerGuessNum < 1) {
+    else if(gamerGuessNum > 15 || gamerGuessNum < 0) {
         console.log("Guess between 1 and 15")
-        feedback.innerHTML = "Choose Number between 1 and 15";
+        feedback.innerHTML = "Choose Number between 0 and 15";
     }
     else if(gamerGuessNum > correctNumber){
         console.log('Too high')
