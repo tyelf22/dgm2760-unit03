@@ -44,14 +44,24 @@ function giveAward() {
     console.log('switch statement active')
     switch(true) {
         case totalGuesses > 0 && totalGuesses < 4:
-            console.log('Blue Ribbon')
+            console.log('gold medal')
+            imagePath = '../images/gold.png'
             break
         case totalGuesses > 4 && totalGuesses < 10 :
-            console.log('Red Ribbon')
+            console.log('blue Ribbon')
+            imagePath = '../images/blue.png'
             break
         case totalGuesses > 10:
-            console.log('Yellow Ribbon')
+            console.log('red Ribbon')
+            imagePath = '../images/green.png'
             break
             
     }
+
+    const awardImage = document.createElement('img'); //creates an image elements
+    awardImage.setAttribute('src', imagePath);
+    const ribbon = document.querySelector('#ribbonAward')
+
+    ribbon.appendChild(awardImage);
 }
+

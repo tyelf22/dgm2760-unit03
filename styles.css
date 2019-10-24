@@ -72,7 +72,6 @@ header > h2 {
 
 .play {
     flex-grow: 1;
-    border: 1px solid red
 }
 
 .play input {
@@ -93,7 +92,6 @@ header > h2 {
 
 .trys {
     flex-grow: 2;
-    border: 1px solid red
 }
 
 #numTrys {
@@ -102,7 +100,6 @@ header > h2 {
 
 .feedback {
     flex-grow: 2;
-    border: 1px solid red
 }
 
 #feed {
@@ -111,7 +108,11 @@ header > h2 {
 
 .award {
     flex-grow: 1;
-    border: 1px solid red
+}
+
+#ribbonAward img {
+    height: 200px;
+    width: 120px;
 }
 
 
